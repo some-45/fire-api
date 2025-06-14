@@ -5,7 +5,7 @@ import joblib
 model = joblib.load("svm_fire_model_balanced.joblib")
 
 # إنشاء التطبيق
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route("/predict", methods=["POST"])
 def predict():
