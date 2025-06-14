@@ -13,4 +13,5 @@ def predict():
     prediction = int(model.predict([values])[0])
     return jsonify({"prediction": prediction})
     if name == "main":
-    app.run(host="0.0.0.0", port=10000, debug=True)
+    app.run(host="0.0.0.0",
+    port=10000, debug=True)
