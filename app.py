@@ -4,7 +4,7 @@ import joblib
 # تحميل النموذج باسمك
 model = joblib.load("svm_fire_model_balanced.joblib")
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route("/predict", methods=["POST"])
 def predict():
