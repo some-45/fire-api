@@ -13,11 +13,11 @@ def predict():
     data = request.get_json()
     if not data or "data" not in data:
         return jsonify({"error":"Missing 'data' field"}),400
-        try:
+    try:
             features=np.array(data["data"]).reshape(1, -1)
             prediction=model.predict(features)[0]
             return jsonify({"partition":int (prediction)})
-            except Exception as e:
+   except Exception as e:
                 return jsonify({"error":str(e)}),500
  
 # تشغيل التطبيق
